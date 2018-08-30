@@ -1,0 +1,23 @@
+
+
+.footer {
+    border-top: 1px solid #f8f8f8;
+    margin-top: 10px;
+    background: white;
+}
+
+.footer .inner{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+}
+
+.footer .inner .links i{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer .inner a{
+    color: #333;
+}

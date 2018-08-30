@@ -11,9 +11,9 @@ export default class header extends Component{
             <div className="header">
                 <div className="logo">个人博客<i >(Lyalleny)</i></div>
                 <div className="navs">
-                    <NavLink  activeClassName="active" to='/app'>文章</NavLink>
-                    <NavLink  activeClassName="active" to='/app/detail'>关于</NavLink>
-                    <NavLink  activeClassName="active" to='/app/lay'>招聘</NavLink>
+                    <NavLink exact activeClassName="active" to='/app'>文章</NavLink>
+                    <NavLink exact activeClassName="active" to='/app/detail'>关于</NavLink>
+                    <NavLink exact activeClassName="active" to='/app/lay'>招聘</NavLink>
                 </div>
             </div>
         )

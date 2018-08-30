@@ -1,6 +1,7 @@
 import React,  {Component} from 'react';
 import {Switch,HashRouter,Route,Router} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
+import 'antd/dist/antd.css';
 
 import App from './App';
 import home from './pages/home';
@@ -16,7 +17,7 @@ export default class Routers extends  Component {
             <Router history={history}>
                 <Switch>
                     <Route exact path="/" component={App}/>
-                    <Route  exact path="/app" component={home}/>
+                    <Route   path="/app" component={home}/>
 
                 </Switch>
             </Router>
