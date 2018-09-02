@@ -1,4 +1,3 @@
-'use strict';
 import React ,{Component} from 'react';
 import {Switch,Route} from 'react-router-dom';
 import Head from '../commonent/Head';
@@ -27,11 +26,14 @@ class home extends Component {
                         </div>
                     </Carousel>
 
-                <Switch>
-                    <Route exact path='/app' component={index} />
-                    <Route  path='/app/detail' component={detail} />
+                <Content>
+                    <Switch>
+                        <Route exact path='/app' component={index} />
+                        <Route  path='/app/detail' component={detail} />
 
-                </Switch>
+                    </Switch>
+                </Content>
+
                 <Footer style={{textAlign: 'center'}}>                        MSPA ©2017-2018 Created by zysoft
                 </Footer>
             </Layout>
