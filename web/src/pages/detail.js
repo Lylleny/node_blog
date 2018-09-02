@@ -39,6 +39,7 @@ class detail extends Component {
 
                 </Content>
             </Layout>
+
         )
     }
 }
