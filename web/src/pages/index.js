@@ -50,8 +50,11 @@ class index extends Component {
                                      animation: `fadeInUp 1s ease ${index * 0.1}s 1 normal forwards running`,
                                      marginTop:10,
                                      padding:10,
+
                                  }}
-                            >
+                                  onClick={()=>this.props.history.push('/app/detail?id=' + item.id)}
+
+                        >
                                <div className="top" style={{flexDirection:'row',display:'flex',justifyContent:'flex-start',alignItems:'center'}}>
                                    <img src={require('../images/photos/12.jpg')} width={60} height={60}></img>
                                    <div style={{marginLeft:20}}>
