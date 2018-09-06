@@ -3,15 +3,14 @@ const fs = require('fs');
 const  koaStatic = require('koa-static');
 const Router = require('koa-router');
 const {conf} = require('./conf/conf');
-const {article} = require('./controller/article');
+const {getArticals} = require('./controller/article');
 
 exports.setRouter = app =>{
     const router = new Router({
-        prefix:conf.apiVersion
+        prefix:'/api'
     });
 
-    router.get('/getArticles',article.getArticles);
-    router.get('/getArticle',article.getArticle);
+    router.get('/getArticals',getArticals);
 
-    app.use(router.routes);
+    app.use(router.routes());
 }

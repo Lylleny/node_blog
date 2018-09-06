@@ -7,13 +7,13 @@ const body = require('koa-body');
 const logger = require('koa-logger');
 const session = require('koa-session');
 const {conf} = require('./conf/conf');
-
+const {setRouter} = require('./router');
 const app = new Koa();
 
 
-app.use(logger);
-app.use(responseTime);
-app.use(helmet);
+app.use(logger());
+app.use(responseTime());
+app.use(helmet());
 app.use(cors());
 app.use(body({multiline:true}));
 app.use(
@@ -24,13 +24,17 @@ app.use(
         httpOnly:true,
         signed:true,
         rolling:false  //强制为每个用户设置session
-    })
+    },
+    app
+    )
 )
 
-app.use(async (ctx)=>{
-ctx.body = 'hello koa2'
-})
+
+setRouter(app);
+// app.use(async (ctx)=>{
+// ctx.body = 'hello koa2'
+// })
 
 app.listen(conf.port,function () {
-    console.log('服务器启动，监听 port : '  + conf.host + conf.port )
+    console.log('服务器启动，监听 port : '  + conf.host +':' + conf.port )
 })
