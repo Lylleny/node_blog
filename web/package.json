@@ -22,7 +22,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://127.0.0.1:7770",
+      "target": "http://127.0.0.1:7701",
       "changeOrigin": true
     },
     "/file": {

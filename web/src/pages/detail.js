@@ -17,7 +17,7 @@ class detail extends Component {
     componentDidMount() {
         const query = parseQueryString();
 
-        Http.Get('/api/getArticle?id='+query.id,(re)=>{
+        Http.Get('/api/getArtical?id='+query.id,(re)=>{
             console.log(re)
             this.setState({
                 content:re.data.content

@@ -16,7 +16,7 @@ class index extends Component {
 
     componentDidMount(){
         console.log('ddfdsfsd');
-        Http.Get('/api/getArticles?pageSize=10&pageNum=1',(re)=>{
+        Http.Get('/api/getArticals?pageSize=10&pageNum=1',(re)=>{
             console.log(re);
             this.setState({
                 lists:re.data
