@@ -23,14 +23,14 @@
     display: inline-block;
     margin-left: 80px;
     color: black;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: bolder;
 }
 
 .header .logo i{
     color: #5bc289;
-    font-size: 12px;
-    margin-left: 10px;
+    font-size: 19px;
+    margin-right: 10px;
 }
 
 .header .navs{
@@ -41,11 +41,14 @@
 .header .navs a{
     margin-right: 40px;
     text-decoration: none;
+    padding-bottom: 15px;
     color: black;
+    width: 100px;
 
 }
 
 .header .navs .active{
+   margin-top: 20px;
 
     border-bottom-width: 2px ;
     border-bottom-color: #5bc289;

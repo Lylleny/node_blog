@@ -9,11 +9,11 @@ export default class header extends Component{
     render(){
         return(
             <div className="header">
-                <div className="logo">个人博客<i >(Lyalleny)</i></div>
+                <div className="logo"><i >Lyalleny</i>iBlog</div>
                 <div className="navs">
-                    <NavLink exact activeClassName="active" to='/app'>文章</NavLink>
-                    <NavLink exact activeClassName="active" to='/app/detail'>关于</NavLink>
-                    <NavLink exact activeClassName="active" to='/app/lay'>招聘</NavLink>
+                    <NavLink exact activeClassName="active" to='/app'>点滴</NavLink>
+                    <NavLink exact activeClassName="active" to='/app/detail'>生活</NavLink>
+                    <NavLink exact activeClassName="active" to='/app/lay'>关于</NavLink>
                 </div>
             </div>
         )

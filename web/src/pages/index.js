@@ -1,7 +1,7 @@
 import '../styles/style/animate.css';
 import React ,{Component} from 'react';
 import {Switch,Route,Link} from 'react-router-dom';
-import {Layout,Card} from 'antd';
+import {Layout,Card,Pagination} from 'antd';
 import Http from '../utils/Http';
 
 const {Content,Footer} = Layout;
@@ -16,6 +16,10 @@ class index extends Component {
 
     componentDidMount(){
         console.log('ddfdsfsd');
+      this.loadDate();
+    }
+
+    loadDate(){
         Http.Get('/api/getArticals?pageSize=10&pageNum=1',(re)=>{
             console.log(re);
             this.setState({
@@ -74,7 +78,10 @@ class index extends Component {
                             </Card>
                         )
                     })}
+
+
                 </Content>
+                <Pagination current={1} pageSize={10} onChange={()=>this.loadDate()} total={5} style = {{paddingLeft:20,paddingRight:20,marginTop:40}}/>
 
             </Layout>
         )
