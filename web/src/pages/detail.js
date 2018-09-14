@@ -30,11 +30,10 @@ class detail extends Component {
 
     render(){
         return(
-            <Layout style={{padding:20}}>
-                <Content style = {{backgroundColor:'#fff',padding:20}}>
+            <Layout style={{padding:20,backgroundColor:'#fff',minHeight:750}}>
+                <Content style = {{marginTop:40}}>
                     <div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: this.state.content }} />
-
                     </div>
 
                 </Content>

@@ -43,7 +43,7 @@ class index extends Component {
 
         console.log(src);
         return(
-            <Layout style={{padding:20}}>
+            <Layout style={{backgroundColor:'#e7e7e7'}}>
                 <Content style = {{justifyContent:'center',alignItems:'center',paddingLeft:20,paddingRight:20}}>
 
                     {this.state.lists.map((item,index)=>{
@@ -52,8 +52,6 @@ class index extends Component {
                                 className="item"
                                  style={{
                                      animation: `fadeInUp 1s ease ${index * 0.1}s 1 normal forwards running`,
-                                     marginTop:10,
-                                     padding:10,
 
                                  }}
                                   onClick={()=>this.props.history.push('/app/detail?id=' + item.id)}

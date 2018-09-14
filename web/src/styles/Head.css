@@ -28,7 +28,7 @@
 }
 
 .header .logo i{
-    color: #5bc289;
+    color: #FF6347;
     font-size: 19px;
     margin-right: 10px;
 }
@@ -51,7 +51,7 @@
    margin-top: 20px;
 
     border-bottom-width: 2px ;
-    border-bottom-color: #5bc289;
+    border-bottom-color: #FF6347;
     border-bottom-style: solid;
 
 }
