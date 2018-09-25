@@ -58,7 +58,7 @@ class home extends Component {
 
                 </Content>
 
-                <Footer style={{textAlign: 'center',backgroundColor:'#e7e7e7'}}>                        MSPA ©2017-2018 Created by zysoft
+                <Footer style={{textAlign: 'center',backgroundColor:'#e7e7e7'}}>                        iBlog Created by Lylleny 2018
                 </Footer>
             </Layout>
         )

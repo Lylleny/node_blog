@@ -10,20 +10,26 @@ class index extends Component {
     constructor(props){
         super(props);
         this.state = {
-            lists:[]
+            lists:[],
+            count:0,
+            current:1,
+            size:6
         }
     }
 
     componentDidMount(){
         console.log('ddfdsfsd');
-      this.loadDate();
+      this.loadDate(this.state.current);
     }
 
-    loadDate(){
-        Http.Get('/api/getArticals?pageSize=10&pageNum=1',(re)=>{
+    loadDate(page){
+        console.log(this.state.current)
+        Http.Get('/api/getArticals?pageNum='+page+'&pageSize=' + this.state.size,(re)=>{
             console.log(re);
             this.setState({
-                lists:re.data
+                lists:re.data.rows,
+                count:re.data.count,
+                current:page
             })
 
         },(er)=>{
@@ -52,6 +58,7 @@ class index extends Component {
                                 className="item"
                                  style={{
                                      animation: `fadeInUp 1s ease ${index * 0.1}s 1 normal forwards running`,
+                                     marginTop:5
 
                                  }}
                                   onClick={()=>this.props.history.push('/app/detail?id=' + item.id)}
@@ -60,7 +67,7 @@ class index extends Component {
                                <div className="top" style={{flexDirection:'row',display:'flex',justifyContent:'flex-start',alignItems:'center'}}>
                                    <img src={require('../images/photos/12.jpg')} width={60} height={60}></img>
                                    <div style={{marginLeft:20}}>
-                                       <div>{item.title}</div>
+                                       <div>{item.title}{index}</div>
                                        <div>作者：{item.author}   <span style={{marginLeft:15}}>{item.date} </span></div>
                                    </div>
                                </div>
@@ -79,10 +86,15 @@ class index extends Component {
 
 
                 </Content>
-                <Pagination current={1} pageSize={10} onChange={()=>this.loadDate()} total={5} style = {{paddingLeft:20,paddingRight:20,marginTop:40}}/>
+                <Pagination current={this.state.current} pageSize={this.state.size} onChange={(page,pageSize)=>this.onChange(page,pageSize)} total={this.state.count} style = {{paddingLeft:20,paddingRight:20,marginTop:40}}/>
 
             </Layout>
         )
+    }
+    
+    onChange(page,pageSize){
+        console.log(page,pageSize)
+        this.loadDate(page);
     }
 }
 

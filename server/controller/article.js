@@ -26,7 +26,7 @@ exports.getArticals = (ctx,next)=>{
 
         }
     }).then(res => {
-        console.log('能获取 ===== ' + JSON.stringify(res.rows));
+        console.log('能获取 ===== ' + JSON.stringify(res));
         if (res){
             result.result(ctx,{
                 data:res

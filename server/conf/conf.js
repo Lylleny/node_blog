@@ -3,7 +3,7 @@ exports.conf = {
     port:7701,
     appVersion:'/api',
     uploadSuffix:['.jpg','png','.gif','jpeg'],
-    limitTime:1000
+    limitTime:10000
 };
 
 exports.db = {
