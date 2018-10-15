@@ -3,6 +3,7 @@ import {Switch,Route} from 'react-router-dom';
 import Head from '../commonent/Head';
 import detail from './detail';
 import index from './index';
+import edit from './edit';
 import {Layout,Card,Carousel,Row,Col} from 'antd';
 // import Row from "antd/es/grid/row.d";
 const {Content,Footer} = Layout;
@@ -51,6 +52,7 @@ class home extends Component {
                         <Switch>
                             <Route exact path='/app' component={index} />
                             <Route  path='/app/detail' component={detail} />
+                            <Route  path='/app/edit' component={edit} />
 
                         </Switch>
                     </div>

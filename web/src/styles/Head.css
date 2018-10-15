@@ -16,7 +16,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .header .logo {
@@ -35,7 +35,7 @@
 
 .header .navs{
     display: inline-block;
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
 .header .navs a{

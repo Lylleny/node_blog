@@ -1,0 +1,36 @@
+.edit {
+    width: 1400px;
+    margin: 10px auto;
+    background: #ffffff;
+    padding: 30px;
+    height: 800px;
+}
+
+.edit .editbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.edit .editbox .item {
+    width: 50%;
+    float: left;
+    height: 100%;
+    background: #ffffff;
+}
+
+
+.edit .editbox .item .markdowntext {
+    border:none;
+    background: #1b1f23;
+    color: white;
+    height: 800px;
+}
+
+.edit .editbox .item .markdown-body {
+    padding: 10px 20px;
+    height: 100%;
+}
+
